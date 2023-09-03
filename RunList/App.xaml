@@ -1,0 +1,21 @@
+﻿<Application x:Class="RunList.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:RunList" xmlns:modelviews="clr-namespace:RunList.ModelViews" xmlns:commands="clr-namespace:RunList.Infrastructure.Commands"
+             StartupUri="Views/MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Brown.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Amber.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Styles\UIColors.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Styles\Navigate.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Styles\ButtonStyles.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+            <commands:DialogCommand x:Key="DialogResultCommand"></commands:DialogCommand>
+            <modelviews:ModelViewLocator x:Key="Locator"></modelviews:ModelViewLocator>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,155 @@
+﻿<Window x:Class="RunList.Views.Windows.NavigateWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RunList.Views.Windows"
+        mc:Ignorable="d"
+        
+        DataContext="{Binding NavigateWindowVM ,Source={StaticResource Locator}}"
+        Title="{Binding Title}"  MaxHeight="800" MinHeight="600" MinWidth="1000" MaxWidth="1600">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="{StaticResource primaryBackColor1}"/>
+            <GradientStop Color="{StaticResource primaryBackColor2}" Offset="1"/>
+            <GradientStop Color="{StaticResource primaryBackColor3}" Offset="0.259"/>
+            <GradientStop Color="{StaticResource BackColor4}" Offset="0.598"/>
+            <GradientStop Color="{StaticResource BackColor5}" Offset="0.87"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Grid.Resources>
+            <ResourceDictionary>
+                <ResourceDictionary.MergedDictionaries>
+                    <ResourceDictionary Source="../../Templates/ModelMainView.xaml"></ResourceDictionary>
+                </ResourceDictionary.MergedDictionaries>
+            </ResourceDictionary>
+        </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="210*" MaxWidth="200"/>
+            <ColumnDefinition Width="600*" MaxWidth="1400"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid x:Name="GridMenu" Width="150" HorizontalAlignment="Left" Height="407" VerticalAlignment="Top">
+
+            <Border  CornerRadius="0,0,15,0" Background="{StaticResource BorderColorTheCurrentWeek}" Margin="0,0,-45,-82">
+                <StackPanel Orientation="Vertical">
+
+                    <StackPanel Margin="-20,20,-5,0" Orientation="Vertical">
+                        <Image  Source="pack://application:,,,/Images/backmenu.png">
+                            <Image.Effect>
+                                <DropShadowEffect BlurRadius="15" Direction="1"></DropShadowEffect>
+                            </Image.Effect>
+                        </Image>
+                        <Button Command="{Binding ShowTheCurrentWeekNumber}" Margin="0,-60,0,0" Height="56" Width="160">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <TextBlock  Text="Задачи на текущую неделю" TextWrapping="Wrap" Foreground="White" FontSize="18"  FontWeight="DemiBold" Margin="0,-4,-8,0" Width="NaN">
+                                        <TextBlock.Effect>
+                                            <DropShadowEffect/>
+                                        </TextBlock.Effect>
+                                    </TextBlock>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </StackPanel>
+                    <Image Margin="100,-15,0,0" Height="39" Source="pack://application:,,,/Images/line.png" RenderTransformOrigin="0.5,0.5">
+                        <Image.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-2.812"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Image.RenderTransform>
+                    </Image>
+
+                    <StackPanel Margin="-20,0,0,0" Orientation="Vertical">
+                        <Image  Source="pack://application:,,,/Images/backmenu.png">
+                            <Image.Effect>
+                                <DropShadowEffect BlurRadius="15" Direction="1"></DropShadowEffect>
+                            </Image.Effect>
+                        </Image>
+                        <Button Command="{Binding ShowCalendarWeekNumbers}" Margin="0,-60,0,0" Height="64" Width="186" RenderTransformOrigin="0.5,0.5">
+                            <Button.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-0.725"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Button.RenderTransform>
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <TextBlock  Text="Календарь по неделям" TextWrapping="Wrap" Foreground="White" FontSize="18"  FontWeight="DemiBold" Margin="17,-8,0,0" Width="NaN">
+                                        <TextBlock.Effect>
+                                            <DropShadowEffect/>
+                                        </TextBlock.Effect>
+                                    </TextBlock>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </StackPanel>
+
+
+                    <StackPanel Margin="-20,20,10,0" Orientation="Vertical">
+                        <Image  Source="pack://application:,,,/Images/backmenu.png">
+                            <Image.Effect>
+                                <DropShadowEffect BlurRadius="15" Direction="1"></DropShadowEffect>
+                            </Image.Effect>
+                        </Image>
+                        <Button Command="{Binding ShowAboutSystem}" Margin="0,-60,0,0" Height="50" Width="184">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <TextBlock  Text="О системе" TextWrapping="Wrap" Foreground="White" FontSize="18"  FontWeight="DemiBold" Margin="0,5,0,0" Width="110">
+                                        <TextBlock.Effect>
+                                            <DropShadowEffect/>
+                                        </TextBlock.Effect>
+                                    </TextBlock>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </StackPanel>
+                    <Image Margin="100,-15,0,0" Height="39" Source="pack://application:,,,/Images/line.png" RenderTransformOrigin="0.5,0.5">
+                        <Image.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-2.812"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Image.RenderTransform>
+                    </Image>
+
+                    <StackPanel Margin="-25,0,15,0" Orientation="Vertical">
+                        <Image  Source="pack://application:,,,/Images/backmenu.png">
+                            <Image.Effect>
+                                <DropShadowEffect BlurRadius="15" Direction="1"></DropShadowEffect>
+                            </Image.Effect>
+                        </Image>
+                        <Button Command="{Binding WindowClose}" CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, 
+                           AncestorType={x:Type Window}}}" Margin="0,-60,0,0" Height="61" Width="195">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <TextBlock  Text="Назад" TextWrapping="Wrap" Foreground="White" FontSize="18"  FontWeight="DemiBold" Margin="20,5,0,0" Width="110">
+                                        <TextBlock.Effect>
+                                            <DropShadowEffect/>
+                                        </TextBlock.Effect>
+                                    </TextBlock>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </StackPanel>
+
+                </StackPanel>
+
+
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="10" Opacity="1"  ShadowDepth="3"/>
+                </Border.Effect>
+            </Border>
+
+        </Grid>
+        <ContentControl  Width="auto" Height="auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="1" Content="{Binding CurrentModel ,UpdateSourceTrigger=PropertyChanged}" ></ContentControl>
+    </Grid>
+</Window>

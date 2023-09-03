@@ -1,0 +1,97 @@
+﻿<Window x:Class="RunList.Views.Windows.AddTask"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:modelviews="clr-namespace:RunList.ModelViews"
+        mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance modelviews:AddUserTask,IsDesignTimeCreatable=True}"
+        Title="{Binding TitleWindow}" Height="450" Width="800">
+   
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="{StaticResource primaryBackColor1}"/>
+            <GradientStop Color="{StaticResource primaryBackColor2}" Offset="1"/>
+            <GradientStop Color="{StaticResource primaryBackColor3}" Offset="0.259"/>
+            <GradientStop Color="{StaticResource BackColor4}" Offset="0.598"/>
+            <GradientStop Color="{StaticResource BackColor5}" Offset="0.87"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition  Width="*"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+        <Border Background="#C99660" Grid.ColumnSpan="3" Width="650" RenderTransformOrigin="0.5,0.5" >
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="2.19"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+            <Grid Width="650" RenderTransformOrigin="0.5,0.5" Margin="0,22,0,0">
+                <Grid.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-0.372"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Grid.RenderTransform>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                </Grid.RowDefinitions>
+                <TextBox  FontWeight="ExtraLight" BorderBrush="#C99660" HorizontalContentAlignment="Center" FontSize="30" FontStyle="Italic" HorizontalAlignment="Center" Width="400" TextWrapping="Wrap" Style="{StaticResource MaterialDesignTextBox}" Text="{Binding Title}" Grid.Row="0"></TextBox>
+                <TextBox FontWeight="ExtraLight" BorderBrush="#C99660" HorizontalContentAlignment="Center" FontSize="30" FontStyle="Italic" HorizontalAlignment="Stretch" Width="400"   TextWrapping="Wrap" Style="{StaticResource MaterialDesignTextBox}" Text="{Binding Description}" Grid.Row="1"></TextBox>
+                <StackPanel Orientation="Horizontal" Grid.Row="2">
+                    <StackPanel Margin="190,0,0,0" Orientation="Vertical" Width="261">
+                        <TextBlock Width="200" Text="День недели:" FontWeight="Black" FontSize="15"></TextBlock>
+                        <ComboBox Cursor="{Binding Cursor}" ItemsSource="{Binding _days}" SelectedItem="{Binding StartDay,UpdateSourceTrigger= PropertyChanged}" BorderBrush="#C99660"  Style="{StaticResource MaterialDesignComboBox}"  Width="200" HorizontalAlignment="Center"  FontSize="15" ></ComboBox>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel  Orientation="Horizontal" Grid.Row="3">
+                    <StackPanel Margin="190,0,0,0"  Orientation="Vertical" Grid.Row="3" Width="256">
+                        <TextBlock Width="200" HorizontalAlignment="Center" FontWeight="Black" FontSize="14" Text="Сложность задачи"></TextBlock>
+                        <ComboBox Cursor="{Binding Cursor}" ItemsSource="{Binding _difficulties}" SelectedItem="{Binding Difficulty,UpdateSourceTrigger=PropertyChanged}"  Width="200" Grid.Row="3" Style="{StaticResource MaterialDesignComboBox}"  BorderBrush="#C99660" ></ComboBox>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Grid.Row="4" Orientation="Horizontal">
+                    <TextBlock Margin="195,0,0,0" HorizontalAlignment="Center" Text="Задача еженедельная?" FontSize="16" FontStyle="Italic" FontWeight="Black"></TextBlock>
+                    <CheckBox IsChecked="{Binding Template}" Margin="5,-35,0,0"></CheckBox>
+                </StackPanel>
+                <StackPanel Grid.Row="5"  HorizontalAlignment="Right" Orientation="Horizontal"  Width="600" >
+                    <Button  Command="{StaticResource DialogResultCommand}" CommandParameter="False" x:Name="Back"  Width="222" Height="56" >
+                        <Button.Template>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <TextBlock Margin="0,10,0,0" FontStyle="Italic"  Text="Назад" Foreground="#241A10" FontSize="16"  HorizontalAlignment="Left" FontWeight="Bold"/>
+                            </ControlTemplate>
+                        </Button.Template>  
+                    </Button>
+                    <Button Command="{StaticResource DialogResultCommand}" CommandParameter="True"  x:Name="AddsTask" Margin="30,0,0,0"  Width="222" Height="56" >
+                        <Button.Template>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <TextBlock Margin="0,10,0,0" FontStyle="Italic"  Text="Добавить задачу" Foreground="#241A10" FontSize="24"  HorizontalAlignment="Right" FontWeight="Bold"/>
+                            </ControlTemplate>
+                        </Button.Template>  
+                    </Button>
+                    <Image Margin="30 10 0 0" Source="pack://application:,,,/images/blot.png" Height="51" Width="67" />
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Image VerticalAlignment="Top" Source="pack://application:,,,/Images/leftTop.png"></Image>
+        <Image VerticalAlignment="Top" Source="pack://application:,,,/Images/lefttopins.png"></Image>
+
+
+        <Image  Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Stretch" Source="pack://application:,,,/Images/rightdesing.png"></Image>
+        <Image Margin="80,0,0,0"  Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Top" Source="pack://application:,,,/Images/rightTop.png"></Image>
+    </Grid>
+
+</Window>

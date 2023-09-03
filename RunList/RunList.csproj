@@ -1,0 +1,126 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <StartupObject>RunList.Program</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\back.png" />
+    <None Remove="Images\backitem2.png" />
+    <None Remove="Images\backmenu.png" />
+    <None Remove="Images\blot.png" />
+    <None Remove="Images\Cursors\cat.cur" />
+    <None Remove="Images\Cursors\PawHelp.cur" />
+    <None Remove="Images\Cursors\PawLoading.ani" />
+    <None Remove="Images\day.png" />
+    <None Remove="Images\ImageItem\completed.png" />
+    <None Remove="Images\ImageItem\completed2.png" />
+    <None Remove="Images\ImageItem\day.png" />
+    <None Remove="Images\ImageItem\easy.png" />
+    <None Remove="Images\ImageItem\empty.png" />
+    <None Remove="Images\ImageItem\empty2.png" />
+    <None Remove="Images\ImageItem\hard.png" />
+    <None Remove="Images\ImageItem\medium.png" />
+    <None Remove="Images\ImageItem\next.png" />
+    <None Remove="Images\ImageItem\taskfire.png" />
+    <None Remove="Images\leftaboutsystemscrean.png" />
+    <None Remove="Images\leftTop.png" />
+    <None Remove="Images\lefttopins.png" />
+    <None Remove="Images\line.png" />
+    <None Remove="Images\rightabout_system_screan.png" />
+    <None Remove="Images\rightdesing.png" />
+    <None Remove="Images\rightTop.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\backitem2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\blot.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\ImageItem\completed.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\ImageItem\completed2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\day.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\ImageItem\day.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\ImageItem\easy.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\ImageItem\empty.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\ImageItem\empty2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\ImageItem\hard.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\ImageItem\medium.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\ImageItem\next.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\ImageItem\taskfire.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\leftaboutsystemscrean.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\leftTop.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\lefttopins.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="beauty_logo.ico" />
+    <Content Include="Images\rightabout_system_screan.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\rightdesing.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\rightTop.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MaterialDesignColors" Version="2.1.1" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.7.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.39" />
+    <PackageReference Include="Nito.AsyncEx" Version="3.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\back.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\backmenu.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\line.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Cursors\cat.cur" />
+    <Resource Include="Images\Cursors\PawHelp.cur" />
+    <Resource Include="Images\Cursors\PawLoading.ani" />
+  </ItemGroup>
+
+</Project>

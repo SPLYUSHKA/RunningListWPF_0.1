@@ -1,0 +1,14 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:vm="clr-namespace:RunList.ModelViews" xmlns:pages="clr-namespace:RunList.Views.Pages" xmlns:views="clr-namespace:RunList.Views">
+
+    <DataTemplate DataType="{x:Type vm:CalendarWeekNumbersVM}">
+        <pages:CalendarWeekNumbers DataContext="{Binding}"></pages:CalendarWeekNumbers>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:TaskTheCurrertNumberVM}">
+        <views:TaskTheCurrentWeekNumber DataContext="{Binding}"></views:TaskTheCurrentWeekNumber>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:AboutSystemVM}">
+        <pages:AboutSystem DataContext="{Binding}"></pages:AboutSystem>
+    </DataTemplate>
+</ResourceDictionary>

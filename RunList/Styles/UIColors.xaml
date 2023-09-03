@@ -1,0 +1,21 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--Background Colors-->
+    <Color x:Key="primaryBackColor1">#FFF2BC8E</Color>
+    <Color x:Key="primaryBackColor2">#CC59443F</Color>
+    <Color x:Key="primaryBackColor3">#FFEFB584</Color>
+    <Color x:Key="BackColor4">#D8F4C094</Color>
+    <Color x:Key="BackColor5">#CC9B7E72</Color>
+     <!--Colors Palete -->
+    <SolidColorBrush x:Key="colorButtonLogBack">#794E35</SolidColorBrush>
+    <SolidColorBrush x:Key="colorButtonLogBorderBrush">#72442B</SolidColorBrush>
+    <SolidColorBrush x:Key="colorButtonBackgroundIsMouseOver">#AF6E48</SolidColorBrush>
+    <SolidColorBrush x:Key="colorButtonBackgroundIsPressed">#332117</SolidColorBrush>
+    <SolidColorBrush x:Key="colorButtonTaskForTheCurrentWeekBack">#916F5B</SolidColorBrush>
+    <SolidColorBrush x:Key="colorButtonTaskForTheCurrentWeekBorderBrush">#FFFF</SolidColorBrush>
+    <SolidColorBrush x:Key="colorButtonTaskForTheCurrentWeekBackIsMouseOver">#0D0D0D</SolidColorBrush>
+    <!--WinBorder Colors-->
+    <SolidColorBrush x:Key="BorderColorTheCurrentWeek">#794D34</SolidColorBrush>
+    <Color x:Key="BorderColorCalendarWeekPage">#98613B</Color>
+    <Color x:Key="ColorWeekItemCalendar">#E0AA6C</Color>
+</ResourceDictionary>
